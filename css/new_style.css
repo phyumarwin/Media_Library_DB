@@ -438,11 +438,11 @@ form input[type="submit"]:hover {
 }
 
 .footer {
-    background: #f0eeed;
+    background: #ef8887;
     border-top: 3px solid #dddddd;
     padding: 42px 0;
     font-size: 12px;
-    color: #a5a5a5;
+    color: white;
 }
 
 .footer ul {
@@ -473,7 +473,8 @@ form input[type="submit"]:hover {
 
 .footer a {
     text-decoration: none;
-    color: #539def;
+    float: left;
+    color: white;
     margin: 0 10px;
 }
 
