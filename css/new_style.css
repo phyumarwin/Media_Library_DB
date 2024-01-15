@@ -1,0 +1,515 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-fill-color: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f0eeed;
+    color: #676767;
+    margin: 0;
+}
+
+a {
+    color: #3888c2;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:focus,
+a:hover {
+    outline: 0;
+    color: #285f87;
+}
+
+.full-catalog {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.full-catalog:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+Typography
+========================================================================== */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+abbr[title] {
+    border-bottom: 1px solid;
+}
+
+
+/* ==========================================================================
+Lists
+========================================================================== */
+
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 40px;
+}
+
+
+/* ==========================================================================
+Tables
+========================================================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+
+table th {
+    padding-right: 40px;
+}
+
+.wrapper {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#content {
+    padding: 20px 0 80px;
+}
+
+.header::after {
+    content: "";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.header {
+    background: #ef8887;
+    border-bottom: 3px solid #db7a78;
+}
+
+.header .wrapper a {
+    float: left;
+    padding: 0 0 0 5px;
+    font: serif;
+    text-shadow: none;
+    color: transparent;
+    width: 225px;
+    height: 125px;
+    background: url('../img/branding-title.png') 0 6px no-repeat;
+    margin: 6px 0;
+}
+
+.header .wrapper a .branding-title {
+    display: none;
+    width: 225px;
+    height: 125px;
+}
+
+.header .nav {
+    float: right;
+    top: 10;
+    right: 0;
+    left: 15px;
+    margin: 0;
+    position: relative;
+    z-index: 99999999;
+}
+
+.header .nav li {
+    display: inline-block;
+    margin: 0;
+    list-style-type: none;
+}
+
+.header .nav li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    line-height: 95px;
+    padding: 10px 0 0;
+    margin: 0 0 0 50px;
+    text-transform: uppercase;
+    width: 100px;
+    text-align: left;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    background: url('../img/nav-sprite.png') no-repeat 0 -336px;
+}
+
+.header .nav li a:hover,
+.header .nav li a:active {
+    opacity: 0.7;
+}
+
+.header .nav li.books a {
+    background-position: 8px -5px;
+}
+
+.header .nav li.movies a {
+    background-position: 13px -105px;
+}
+
+.header .nav li.music a {
+    background-position: 18px -228px;
+}
+
+.header .nav li.suggest a {
+    background-position: 35px -340px;
+}
+
+.header .nav li.on a,
+.header .nav li.on a,
+.header .nav li.on a,
+.header .nav li.on a:active {
+    /* border-bottom: 2px solid #676767; */
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Main Content
+========================================================================== */
+
+#content {
+    min-height: 400px;
+    background: white;
+}
+
+.section.page:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+.section.page {
+    padding: 34px 0;
+    background: white;
+}
+
+.section.page h1 {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+.section.page .media-details h1 {
+    text-align: left;
+}
+
+.section.page p {
+    width: 475px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section.page .media-details h1 .price {
+    color: #9d9f4e;
+    padding-right: 10px;
+    font-size: 34px;
+}
+
+.section.catalog {
+    padding-bottom: 42px;
+}
+
+.section.catalog h2 {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: normal;
+    padding-top: 20px;
+}
+
+.section.catalog ul.items {
+    margin: 0 0 -17px 0;
+    padding: 0;
+    width: 997px;
+}
+
+.section.catalog ul.items li {
+    display: inline-block;
+    list-style: none;
+    width: 204px;
+    text-align: center;
+    padding: 14px;
+    margin: 0 0 17px 35px;
+    position: relative;
+    left: -17px;
+}
+
+.section.catalog ul.items li a:hover:after {
+    content: '+';
+    font-size: 50px;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    color: #3888c2;
+    vertical-align: top;
+}
+
+.section.catalog ul.items li a {
+    background: white;
+    display: block;
+    padding: 30px 0 10px;
+    text-decoration: none;
+}
+
+.details-button {
+    color: #888;
+}
+
+.section.catalog ul.items li a:hover {
+    opacity: 1;
+    color: #666;
+}
+
+.section.catalog ul.items li img {
+    width: 190px;
+    border: 6px solid #f0eeed;
+}
+
+.section.catalog ul.items li p {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+}
+
+.media-picture {
+    float: left;
+    width: 400px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    padding: 14px;
+    background: #f0eeed;
+}
+
+.media-picture span {
+    background: white;
+    display: block;
+    width: 100%;
+    padding: 36px 0 61px;
+}
+
+.media-picture img {
+    width: 292px;
+}
+
+.media-details {
+    width: 460px;
+    float: right;
+}
+
+.media-details form {
+    margin-left: 0;
+}
+
+.header-submit {
+    width: 100%;
+    margin: 34px 0px;
+    text-align: right;
+}
+
+.btn-submit-style {
+    text-align: center;
+    border: 0;
+    background: #3888c2;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0px 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+form {
+    width: 475px;
+    margin: 34px auto;
+}
+
+form tr {
+    text-align: left;
+}
+
+form table {
+    width: 475px;
+    margin-bottom: 16px;
+}
+
+form th {
+    width: 150px;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+form td {
+    padding: 15px 15px;
+}
+
+form td select,
+form td input,
+form td textarea {
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #a5a5a5;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.suggest-submit {
+    width: 475px;
+    text-align: center;
+    border: 0;
+    background: #3888c2;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 14px 0 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+form input[type="submit"]:hover {
+    background: #358dce;
+    cursor: pointer;
+}
+
+.page p.message {
+    background: #ffeca4;
+    border: 1px solid #f16702;
+    padding: 1em;
+    width: 444px;
+}
+
+.breadcrumb {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 14px 0 48px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #3888c2;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.note-designer {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.footer {
+    background: #f0eeed;
+    border-top: 3px solid #dddddd;
+    padding: 42px 0;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.footer ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+.footer ul li:after {
+    content: " | "
+}
+
+.footer ul li:last-child:after {
+    content: "";
+}
+
+.footer p {
+    margin: 0;
+    padding-right: 3px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #539def;
+    margin: 0 10px;
+}
+
+.footer li:first-child a {
+    margin-left: 4px;
+}
+
+.footer a:hover,
+.footer a:active {
+    text-decoration: underline;
+}
+
+.wrapper p {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .thank{
+    margin-left: 600px;
+    width: 300px;
+  }
+.wrapper table {
+    margin-left:50px;
+}
+.wrapper .form-content-spacing{
+  border-spacing:0 5px;
+}
+table {
+  font-size: 1.2em;
+}
+table th{
+  text-align: left;
+}
+.sendBtn {
+  background-color: #ef8887;
+  margin-left: 300px;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
