@@ -58,6 +58,7 @@
                         $results->bindParam(2, $offset, PDO::PARAM_INT);
                     } else {
                         $results = $db->prepare($sql);
+                        
                     }
                     $results->execute();
                 } catch (Exception $e) {
